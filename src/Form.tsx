@@ -1,15 +1,25 @@
-import React, {useState,useEffect} from 'react';
-function Form (){
-  let [name:string, changeState] = useState('')
+import * as React from 'react';
+import {ideaContexts} from './Ideas'
 
+function Form (props:any){
+  const value = React.useContext(ideaContexts);
+  let [toDo, changeState] = React.useState('')
+  let createToDo =(todo:string)=>{
+    changeState(todo)
+  }
+  let addToDo = (e:any,todo:string) =>{
+    e.preventDefault()
+    console.log(todo)
+    value.push(todo)
+  }
   return(
       <section>
-        <form onSubmit={submitForm}>
+        <form >
           <input
-            value={name}
             placeholder="Add A Todo"
-            onChange={e => createToDo(e.target.value)} />
-          <button>Add Todo</button>
+            value = {toDo} 
+            onChange={e => createToDo(e.target.value)}/>
+          <button onClick = {e =>{addToDo(e,toDo)}} >Add Todo</button>
         </form>
       </section>
   )
