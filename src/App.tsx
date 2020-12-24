@@ -1,12 +1,12 @@
-import React from 'react';
+import * as React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Form from 'Form'
+import Ideas from './Ideas'
 
-
-function App() {
+function App(props:any) {
   return (
-    <Form/>
+    <Ideas>
+    </Ideas>
   );
 }
 
