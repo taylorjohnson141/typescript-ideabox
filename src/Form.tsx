@@ -11,7 +11,6 @@ function Form (props:any){
     e.preventDefault()
     console.log(todo)
     value.push(todo)
-    console.log(value)
   }
   return(
       <section>

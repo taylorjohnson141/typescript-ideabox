@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Form from './Form'
+import FormList from './FormList'
 const result : string[] = [];
 export const ideaContexts = React.createContext( result);
 
@@ -9,7 +10,7 @@ function Ideas(props:any) {
   return (
     <ideaContexts.Provider value={state}>
      <Form/>
-     <FormList>
+     <FormList/>
     </ideaContexts.Provider>
   )
 }
