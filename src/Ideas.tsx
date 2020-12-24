@@ -9,6 +9,7 @@ function Ideas(props:any) {
   return (
     <ideaContexts.Provider value={state}>
      <Form/>
+     <FormList>
     </ideaContexts.Provider>
   )
 }
